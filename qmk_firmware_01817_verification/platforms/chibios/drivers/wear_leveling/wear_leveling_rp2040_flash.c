@@ -6,6 +6,9 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+#undef rom_hword_as_ptr
+#define rom_hword_as_ptr(rom_address) ((void *)(uintptr_t)(rom_address))
+
 #include "pico/bootrom.h"
 #include "hardware/flash.h"
 #include "hardware/sync.h"
